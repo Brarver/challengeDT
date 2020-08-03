@@ -1222,97 +1222,184 @@
 //91
 //45
 
-function StringReduction(str) { 
+// function StringReduction(str) { 
 
-  var stringLength;
+//   var stringLength;
 
-  ///FUNCTION TO CHECK IF STRING IS REDUCED
-  function isReduced(string) {
+//   ///FUNCTION TO CHECK IF STRING IS REDUCED
+//   function isReduced(string) {
 
-    if (string.length === 1) {
-      return true
-    }
+//     if (string.length === 1) {
+//       return true
+//     }
 
-    const array = string.split("");
+//     const array = string.split("");
 
-    let isTrue = true;
-    for (var i = 0; i < array.length - 1; i++) {
+//     let isTrue = true;
+//     for (var i = 0; i < array.length - 1; i++) {
       
-      if (array[i] === array[i + 1]) {
-        isTrue = true;
-      } else {
-        isTrue = false;
-      }
+//       if (array[i] === array[i + 1]) {
+//         isTrue = true;
+//       } else {
+//         isTrue = false;
+//       }
 
-      if (!isTrue) {
-        break;
-      }
-    }
+//       if (!isTrue) {
+//         break;
+//       }
+//     }
 
-    return isTrue;
+//     return isTrue;
 
-  }
+//   }
 
-  ///FUNCTION TO REDUCE STRING
-  function innerReduction(string) {
+//   ///FUNCTION TO REDUCE STRING
+//   function innerReduction(string) {
 
-    let newString = "";
-    let j = 0;
-    const array = string.split("");
+//     let newString = "";
+//     let j = 0;
+//     const array = string.split("");
 
-    for (var i = 0; i < array.length; i++) { ///bba
+//     for (var i = 0; i < array.length; i++) { ///bba
 
-      if (i === 0 && array[i + j] === array[i + j + 1]) {
+//       if (i === 0 && array[i + j] === array[i + j + 1]) {
 
-        newString = array[i + j]
-        console.log('same', newString);
+//         newString = array[i + j]
+//         console.log('same', newString);
         
         
-      } else if (array[i + j] === array[i + j + 1]) {
+//       } else if (array[i + j] === array[i + j + 1]) {
         
-        newString += array[i + j]
-        j++
-        console.log(newString)
+//         newString += array[i + j]
+//         j++
+//         console.log(newString)
 
-      } else if ((array[i + j] === 'a' || array[i + j] === 'b') && (array[i + j + 1] === 'a' || array[i + j + 1] === 'b')) {
+//       } else if ((array[i + j] === 'a' || array[i + j] === 'b') && (array[i + j + 1] === 'a' || array[i + j + 1] === 'b')) {
 
-        newString += 'c';
-        j++
-        console.log(newString)
+//         newString += 'c';
+//         j++
+//         console.log(newString)
 
-      } else if ((array[i + j] === 'b' || array[i + j] === 'c') && (array[i + j + 1] === 'b' || array[i + j + 1] === 'c')) {
+//       } else if ((array[i + j] === 'b' || array[i + j] === 'c') && (array[i + j + 1] === 'b' || array[i + j + 1] === 'c')) {
 
-        newString += 'a';
-        j++
-        console.log(newString)
+//         newString += 'a';
+//         j++
+//         console.log(newString)
 
-      } else if ((array[i + j] === 'a' || array[i + j] === 'c') && (array[i + j + 1] === 'a' || array[i + j + 1] === 'c')) {
+//       } else if ((array[i + j] === 'a' || array[i + j] === 'c') && (array[i + j + 1] === 'a' || array[i + j + 1] === 'c')) {
 
-        newString += 'b';
-        j++
-        console.log(newString)
-      }
-    }    
+//         newString += 'b';
+//         j++
+//         console.log(newString)
+//       }
+//     }    
 
-    if (isReduced(newString)) {
-      console.log('done')
-      stringLength = newString.length
+//     if (isReduced(newString)) {
+//       console.log('done')
+//       stringLength = newString.length
       
-    } else {
-      console.log('nr', newString)
-      innerReduction(newString)
+//     } else {
+//       console.log('nr', newString)
+//       innerReduction(newString)
+//     }
+
+//     return stringLength;
+//   }
+
+  
+  
+//  return innerReduction(str)
+  
+  
+  
+
+// }
+
+// console.log(StringReduction('bba'));
+                                                    // 0 
+// function solve(arr){
+
+//   var highNumber = 0;
+
+//   for (var i = 0; i < arr.length; i++) {
+
+//     for (var j = 1; j < arr[i].length; j++) {
+
+//       for (var k = 0; k < arr[j].length; k++) {
+
+//         if (arr[i][j] * arr[j][k] > highNumber) {
+//           highNumber = arr[i][j] * arr[j][k]
+//         }
+
+//       }
+
+
+//     }
+
+//   }
+
+//   return highNumber;
+  
+// }
+
+// console.log(solve([[1, 2],[3, 4]]))
+
+
+// function repeatStr (n, s) {
+
+//   var string = s;
+//   for (var i = 0; i < n - 1; i++) {
+//     string += s
+//   }
+//   return string;
+// }
+
+// console.log(repeatStr(7, 'k'))
+
+// function allNonConsecutive (arr) {
+
+//   var solution = [];
+
+//   if (arr.length <= 1) {
+//     return [];
+//   }
+
+//   for (var i = 0; i < arr.length; i++) {
+//     if(arr[i] + 1 === arr[i + 1] && i + 1 < arr.length) {
+//       continue;
+//     } else if (i + 1 < arr.length) {
+//       solution.push({i: i + 1, n: arr[i + 1]})
+//     }
+//   }
+
+//   return solution;
+// }
+
+// console.log(allNonConsecutive([1,2,3,4,6,7,8,10]))
+
+function partsSums(ls) {
+
+  var num = ls.length;
+  var arr = ls;
+  var result = [];
+  var sum = 0;
+
+  for (var i = 0; i < num; i++) {
+
+    for (var j = 0; j < arr.length; j++) {
+      sum += arr[j]
     }
 
-    return stringLength;
+    result.push(sum);
+    sum = 0;
+    arr.shift()
   }
-
+  result.push(0)
+  return result;
   
-  
- return innerReduction(str)
-  
-  
-  
-
 }
 
-console.log(StringReduction('bba'));
+console.log('final', partsSums([0, 1, 3, 6, 10]))
+
+////try find total and then subtracting
+
