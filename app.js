@@ -1377,29 +1377,75 @@
 
 // console.log(allNonConsecutive([1,2,3,4,6,7,8,10]))
 
-function partsSums(ls) {
+// function partsSums(ls) {
 
-  var num = ls.length;
-  var arr = ls;
-  var result = [];
-  var sum = 0;
+//   var num = ls.length;
+//   var arr = ls;
+//   var result = [];
+//   var sum = 0;
 
-  for (var i = 0; i < num; i++) {
+//   for (var i = 0; i < num; i++) {
 
-    for (var j = 0; j < arr.length; j++) {
-      sum += arr[j]
-    }
+//     for (var j = 0; j < arr.length; j++) {
+//       sum += arr[j]
+//     }
 
-    result.push(sum);
-    sum = 0;
-    arr.shift()
-  }
-  result.push(0)
-  return result;
+//     result.push(sum);
+//     sum = 0;
+//     arr.shift()
+//   }
+//   result.push(0)
+//   return result;
   
+// }
+
+// console.log('final', partsSums([0, 1, 3, 6, 10]))
+
+// ////try find total and then subtracting
+
+// function parts(ls) {
+
+//   var num = ls.length;
+//   var result = [];
+
+//   for (var i = 0; i < num + 1; i++) {
+//     var sum = ls.reduce(function(a, b) {
+//       return a + b;
+//     }, 0)
+//     result.push(sum);
+//     ls.shift();
+//   }
+
+//   return result;
+// }
+
+// console.log('final', parts([0, 1, 3, 6, 10]))
+//0 0 1 6 10      17  
+
+
+function solve(arr) {
+  
+  arr.sort()
+  if(arr[1] != 1) {
+    return 1;
+  }
+
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] === (i+1)) {
+      continue;
+    };
+
+
+  }
+
+
+
+
 }
 
-console.log('final', partsSums([0, 1, 3, 6, 10]))
+console.log(solve([1,2,8,7]))
 
-////try find total and then subtracting
 
+1 2 7 8   
+
+sum = 3
