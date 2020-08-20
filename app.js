@@ -1423,29 +1423,109 @@
 //0 0 1 6 10      17  
 
 
-function solve(arr) {
+// function solve(arr) {
   
-  arr.sort()
-  if(arr[1] != 1) {
-    return 1;
-  }
+//   arr.sort()
+//   if(arr[1] != 1) {
+//     return 1;
+//   }
 
-  for (var i = 0; i < arr.length; i++) {
-    if (arr[i] === (i+1)) {
-      continue;
-    };
-
-
-  }
+//   for (var i = 0; i < arr.length; i++) {
+//     if (arr[i] === (i+1)) {
+//       continue;
+//     };
 
 
+//   }
 
 
-}
-
-console.log(solve([1,2,8,7]))
 
 
-1 2 7 8   
+// }
 
-sum = 3
+// console.log(solve([1,2,8,7]))
+
+
+// 1 2 7 8   
+
+// sum = 3
+
+// var person = {
+//   name: "Hodor",
+//   saySomething: function() {
+//     console.log(this.name + " is thinking...");
+//     setTimeout(function() {
+//       console.log(this.name + "!");
+//     }, 100);
+//   }
+// };
+
+// person.saySomething(); // prints "Hodor is thinking..."
+// // prints "undefined!" 100ms later
+
+// // Arrow functions bind the `this` keyword to the object it's created inside of
+// // i.e. whatever `this` is where it's created
+// var person = {
+//   name: "Hodor",
+//   saySomething: function() {
+//     console.log(this.name + " is thinking...");
+//     setTimeout(() => console.log(this.name + "!"), 100);
+//   }
+// };
+
+// person.saySomething(); // "Prints Hodor is thinking..."
+// // prints `Hodor!` 100ms later
+
+// var person = {
+//   name: "Hodor",
+//   saySomething() {
+//     console.log(this.name + " is thinking...");
+//     setTimeout(() => console.log(this.name + "!"), 100);
+//   }
+// };
+
+// person.saySomething(); // "Prints Hodor is thinking..."
+// // prints `Hodor!` 100ms later
+
+// var dog = {
+//   name: "Lassie",
+//   sound: "Woof!",
+//   makeSound: () => console.log(this.sound),
+//   readTag: () => console.log("The dog's tag reads: " + this.name + ".")
+// };
+
+// // Prints `undefined`
+// dog.makeSound();
+
+// // Prints `The dog's tag reads: undefined.`
+// dog.readTag();
+
+// var dog = {
+//   name: "Lassie",
+//   sound: "Woof!",
+//   makeSound () {console.log(this.sound)},
+//   readTag () {
+//     console.log("The dog's tag reads: " + this.name + ".")
+//     setTimeout(() => {console.log(this.name)},3000)
+//   }
+// };
+
+// // Prints `undefined`
+// dog.makeSound();
+
+// // Prints `The dog's tag reads: undefined.`
+// dog.readTag();
+
+// let x = 42;
+
+// for (let j = 0; j < 5; j++) {
+//   console.log(j);
+//   console.log(x);
+// }
+
+// console.log(j); // ReferenceError: j is not defined
+
+// let j = 42;
+// console.log(j);
+
+console.log(Math.random() * 5)
